@@ -12,8 +12,8 @@
   DTS:ObjectName="Actualizar_InventarioPiso_SISBASES"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{4C1F8F74-A88C-4D4C-BE15-5014EDF87F79}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{7C291787-E3AC-4F94-B66E-AE5FB81F5120}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,12 +29,12 @@
           DTS:ConnectionString="Data Source=192.168.10.33;User ID=usr_sib;Initial Catalog=PA_TOVA_SIB_Inventarios;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="suNgx7bxtA=="
-            IV="iKoWliD/MkU=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="rMBE6JhaVQ=="
+            IV="ayb1UPMCbi4=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>iKoWliD/MkWW/NTXPMp0urgHwV5equEEVJFmnI8LR4IRKmPuGW+ye4y21TCBu/YZBOcm7i5EPtRQ3It4zUs51jabCcyo5Cb7FRHke+12dq+UAwG6RE+Raq15snXXeCGzQtwwCucDtlG/lQ5iiC+Lytos5q2LNW0fMbyQ+k1szI5n4kCZPLcxQQ==</CipherValue>
+              <CipherValue>ayb1UPMCbi5CIFK9nXKdnSiwNYVcnW09XLnNmALgD0pfQ1MbMcyPYDqgfvy+uOV3SFFH08T685nPFxwvKK0fHi8t8QinXUPDSypvZ6PoeOigQqUMjP45kBZiz9m94iZbPGpYwnFMQML5mKKVA4YwF8ZEO52iks+0lEvKRqQN89UVJzmxrCdwrw==</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -52,12 +52,12 @@
           DTS:ConnectionString="Data Source=sisbasesbd-prod.grupotova.local;User ID=USR_SISBASES;Initial Catalog=SISBASES;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="uXk6Z7j6Sw=="
-            IV="vgAWbVWc6+g=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="l7qbVtAucg=="
+            IV="D9WpVQuiRaI=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>vgAWbVWc6+hPb0xrGGtTZI4oxzofdbQiXP77Yp9Yb6/lxchnWTM71QNTfjIo0tL+O1o5vpkwGYb36NVGNjtE5KyAm+uoeCAZiG4UZcHfjzpzRYOrTAdQwGgWSjUMXrUsi+hzCrGOkI4AGzjtZ5qQN5+vx6sHuuQ9qT4sgHQgSjI=</CipherValue>
+              <CipherValue>D9WpVQuiRaKfV4u3PcSf2xl+r9mWjEpJwDy+L7cuPOw0SpyRkOWBlB5FpDjOlU1UlUMmTmjDWM1ItNFtMtd9wzNuk0En6Xlg+CRF69fVuCxeCJ64oK64AA6bZUq6Zs24+gKhdhRrlWArMPSt73OLi4a3FuA+zfIlmhKNfK9mr5s=</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -3951,7 +3951,7 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
     design-time-name="Package\Obtener documentos a procesar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="289,42"
           Id="Package\Obtener documentos a procesar\Listar Documentos contados o modificados"
@@ -3979,7 +3979,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3997,7 +3999,7 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
     design-time-name="Package\Procesar documentos\01 Cargar Ubicaciones de Deposito segun el documento de conteo\0101 Eliminar ubicaciones de deposito existentes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Procesar documentos\01 Cargar Ubicaciones de Deposito segun el documento de conteo\0101 Eliminar ubicaciones de deposito existentes\Obtener SKU del documento"
@@ -4025,7 +4027,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4043,7 +4047,7 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
     design-time-name="Package\Procesar documentos\01 Cargar Ubicaciones de Deposito segun el documento de conteo\0102 Cargar ubicaciones de deposito segun conteo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="194,42"
           Id="Package\Procesar documentos\01 Cargar Ubicaciones de Deposito segun el documento de conteo\0102 Cargar ubicaciones de deposito segun conteo\Insertar en Ubicaciones_SKU"
@@ -4071,7 +4075,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4089,7 +4095,7 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
     design-time-name="Package\Procesar documentos\02 Eliminar InventarioInicialPiso *tipo_conteo ADUANAS*">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Procesar documentos\02 Eliminar InventarioInicialPiso *tipo_conteo ADUANAS*\Obtener SKU del documento"
@@ -4117,14 +4123,16 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="NOTA: Este paso solo aplica para tipo_conteo = 3  (ADUANA)"
           ParentId="Package\Procesar documentos\02 Eliminar InventarioInicialPiso *tipo_conteo ADUANAS*"
           FontInfo="{assembly:Null}"
-          Size="351,40"
+          Size="351,NaN"
           Id="04332f01-f9dc-40e4-a3ae-61369cdc6dd7"
           TopLeft="12.9999999999999,1.99999999999999" />
       </GraphLayout>
@@ -4194,7 +4202,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4216,7 +4226,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4369,7 +4381,9 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4463,14 +4477,16 @@ where p.base = @base and p.sku_id = @sku_id);	</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="NOTA: Este paso solo aplica para tipo_conteo = 3  (ADUANA)"
           ParentId="Package\Procesar documentos\04 Calcular Inv Inicial Piso usando Conteo Deposito &quot;tipo_conteo ADUANAS&quot;"
           FontInfo="{assembly:Null}"
-          Size="351.2,40"
+          Size="351.2,NaN"
           Id="0313eb6e-3443-41a2-818e-4603ef7b5ea7"
           TopLeft="180.128571428571,3.95714285714264" />
       </GraphLayout>
